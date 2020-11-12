@@ -64,6 +64,9 @@ class RestaurantTableTableViewController: UITableViewController {
         } else {
             cell.accessoryType = .none
         }
+        
+        // The above if else can be written as
+        // cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
 
         return cell
     }

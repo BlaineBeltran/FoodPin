@@ -7,19 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0E017D255DD5F90046F273 /* RestaurantTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E017C255DD5F90046F273 /* RestaurantTableTableViewController.swift */; };
+		CE0E017F255DE21E0046F273 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */; };
 		CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23B220255D9D4100B952DC /* AppDelegate.swift */; };
 		CE23B223255D9D4100B952DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23B222255D9D4100B952DC /* SceneDelegate.swift */; };
-		CE23B225255D9D4100B952DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23B224255D9D4100B952DC /* ViewController.swift */; };
 		CE23B228255D9D4100B952DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B226255D9D4100B952DC /* Main.storyboard */; };
 		CE23B22A255D9D4200B952DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE23B229255D9D4200B952DC /* Assets.xcassets */; };
 		CE23B22D255D9D4200B952DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B22B255D9D4200B952DC /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE0E017C255DD5F90046F273 /* RestaurantTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableTableViewController.swift; sourceTree = "<group>"; };
+		CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		CE23B21D255D9D4100B952DC /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE23B220255D9D4100B952DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE23B222255D9D4100B952DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE23B224255D9D4100B952DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE23B227255D9D4100B952DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE23B229255D9D4200B952DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE23B22C255D9D4200B952DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,11 +60,12 @@
 			children = (
 				CE23B220255D9D4100B952DC /* AppDelegate.swift */,
 				CE23B222255D9D4100B952DC /* SceneDelegate.swift */,
-				CE23B224255D9D4100B952DC /* ViewController.swift */,
 				CE23B226255D9D4100B952DC /* Main.storyboard */,
 				CE23B229255D9D4200B952DC /* Assets.xcassets */,
 				CE23B22B255D9D4200B952DC /* LaunchScreen.storyboard */,
 				CE23B22E255D9D4200B952DC /* Info.plist */,
+				CE0E017C255DD5F90046F273 /* RestaurantTableTableViewController.swift */,
+				CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE23B225255D9D4100B952DC /* ViewController.swift in Sources */,
+				CE0E017F255DE21E0046F273 /* RestaurantTableViewCell.swift in Sources */,
+				CE0E017D255DD5F90046F273 /* RestaurantTableTableViewController.swift in Sources */,
 				CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */,
 				CE23B223255D9D4100B952DC /* SceneDelegate.swift in Sources */,
 			);

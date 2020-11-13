@@ -14,6 +14,7 @@
 		CE23B228255D9D4100B952DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B226255D9D4100B952DC /* Main.storyboard */; };
 		CE23B22A255D9D4200B952DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE23B229255D9D4200B952DC /* Assets.xcassets */; };
 		CE23B22D255D9D4200B952DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B22B255D9D4200B952DC /* LaunchScreen.storyboard */; };
+		CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CE23B229255D9D4200B952DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE23B22C255D9D4200B952DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE23B22E255D9D4200B952DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CE23B22E255D9D4200B952DC /* Info.plist */,
 				CE0E017C255DD5F90046F273 /* RestaurantTableTableViewController.swift */,
 				CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */,
+				CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				CE0E017F255DE21E0046F273 /* RestaurantTableViewCell.swift in Sources */,
 				CE0E017D255DD5F90046F273 /* RestaurantTableTableViewController.swift in Sources */,
+				CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */,
 				CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */,
 				CE23B223255D9D4100B952DC /* SceneDelegate.swift in Sources */,
 			);

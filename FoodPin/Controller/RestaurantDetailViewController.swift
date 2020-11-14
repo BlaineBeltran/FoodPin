@@ -15,19 +15,16 @@ class RestaurantDetailViewController: UIViewController {
     @IBOutlet var restaurantTypeLabel: UILabel!
     @IBOutlet var restaurantLocationLabel: UILabel!
     
-    
-    var restaurantImageName = ""
-    var restaurantName = ""
-    var restaurantType = ""
-    var restaurantLocation = ""
+    // Create a new Restaurant object
+    var restaurant = Restaurant()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        restaurantImageView.image = UIImage(named: restaurantImageName)
-        restaurantTypeLabel.text = restaurantType
-        restaurantNameLabel.text = restaurantName
-        restaurantLocationLabel.text = restaurantLocation
+        restaurantImageView.image = UIImage(named: restaurant.image)
+        restaurantTypeLabel.text = restaurant.type
+        restaurantNameLabel.text = restaurant.name
+        restaurantLocationLabel.text = restaurant.location
     }
     
 

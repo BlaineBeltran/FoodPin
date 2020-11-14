@@ -115,7 +115,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-cE-jRk" userLabel="Name Label">
-                                    <rect key="frame" x="14" y="259" width="90" height="44"/>
+                                    <rect key="frame" x="14" y="269" width="90" height="44"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="35"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -124,35 +124,41 @@
                                     <rect key="frame" x="14" y="316" width="100" height="20"/>
                                     <color key="backgroundColor" red="0.94873636959999996" green="0.59265928010000002" blue="0.56438896009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Rux-ES-XjK"/>
-                                        <constraint firstAttribute="height" constant="20" id="n7f-Gr-IqN"/>
+                                        <constraint firstAttribute="height" constant="20" id="HaQ-gA-9Cr"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="VAL-Gb-COd"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="13"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f49-oB-MZa" userLabel="Heart Image View">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ozU-tr-GH6" userLabel="Heart Image View">
                                     <rect key="frame" x="122" y="318.5" width="15" height="15"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="15" id="NaX-qu-KgT"/>
-                                        <constraint firstAttribute="width" constant="15" id="tr5-8y-fVh"/>
+                                        <constraint firstAttribute="height" constant="15" id="gRM-uL-gPI"/>
+                                        <constraint firstAttribute="width" constant="15" id="pzO-Ed-m69"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstItem="QQ3-wd-q5i" firstAttribute="leading" secondItem="vYX-7i-oIx" secondAttribute="leading" id="0O1-gg-Mrw"/>
-                                <constraint firstItem="f49-oB-MZa" firstAttribute="leading" secondItem="FIp-rK-WkM" secondAttribute="trailing" constant="8" id="7h9-wf-f2H"/>
-                                <constraint firstItem="bFZ-cE-jRk" firstAttribute="leading" secondItem="FIp-rK-WkM" secondAttribute="leading" id="Ap7-UO-Zz9"/>
-                                <constraint firstItem="FIp-rK-WkM" firstAttribute="top" secondItem="bFZ-cE-jRk" secondAttribute="bottom" constant="13" id="DnL-xg-IzD"/>
-                                <constraint firstAttribute="bottom" secondItem="QQ3-wd-q5i" secondAttribute="bottom" id="DnT-f3-OQA"/>
-                                <constraint firstAttribute="trailing" secondItem="QQ3-wd-q5i" secondAttribute="trailing" id="I5G-8C-dfr"/>
-                                <constraint firstItem="f49-oB-MZa" firstAttribute="centerY" secondItem="FIp-rK-WkM" secondAttribute="centerY" id="QGV-9c-dH1"/>
-                                <constraint firstAttribute="bottom" secondItem="FIp-rK-WkM" secondAttribute="bottom" constant="14" id="Yb5-tK-fe9"/>
-                                <constraint firstItem="FIp-rK-WkM" firstAttribute="leading" secondItem="vYX-7i-oIx" secondAttribute="leading" constant="14" id="cT7-oR-DUq"/>
-                                <constraint firstItem="QQ3-wd-q5i" firstAttribute="top" secondItem="vYX-7i-oIx" secondAttribute="top" id="iay-8Z-8Y8"/>
-                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bFZ-cE-jRk" secondAttribute="trailing" constant="50" id="jHW-8q-yaY"/>
+                                <constraint firstAttribute="bottom" secondItem="QQ3-wd-q5i" secondAttribute="bottom" id="9V9-0K-klc"/>
+                                <constraint firstItem="ozU-tr-GH6" firstAttribute="leading" secondItem="FIp-rK-WkM" secondAttribute="trailing" constant="8" id="Eou-Oz-fxo"/>
+                                <constraint firstItem="FIp-rK-WkM" firstAttribute="leading" secondItem="vYX-7i-oIx" secondAttribute="leading" constant="14" id="LnN-x6-qai"/>
+                                <constraint firstItem="FIp-rK-WkM" firstAttribute="top" secondItem="bFZ-cE-jRk" secondAttribute="bottom" constant="3" id="PcT-H7-OBH"/>
+                                <constraint firstItem="bFZ-cE-jRk" firstAttribute="leading" secondItem="FIp-rK-WkM" secondAttribute="leading" id="Rfe-tD-oEe"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bFZ-cE-jRk" secondAttribute="trailing" constant="50" id="SgF-oU-jvt"/>
+                                <constraint firstAttribute="trailing" secondItem="QQ3-wd-q5i" secondAttribute="trailing" id="TrZ-hc-fBK"/>
+                                <constraint firstItem="ozU-tr-GH6" firstAttribute="centerY" secondItem="FIp-rK-WkM" secondAttribute="centerY" id="bWI-pM-7Nm"/>
+                                <constraint firstItem="QQ3-wd-q5i" firstAttribute="top" secondItem="vYX-7i-oIx" secondAttribute="top" id="i4Q-ED-W37"/>
+                                <constraint firstItem="QQ3-wd-q5i" firstAttribute="leading" secondItem="vYX-7i-oIx" secondAttribute="leading" id="wCS-eC-sb8"/>
+                                <constraint firstAttribute="bottom" secondItem="FIp-rK-WkM" secondAttribute="bottom" constant="14" id="zj3-xt-mjH"/>
                             </constraints>
+                            <connections>
+                                <outlet property="headerImageView" destination="QQ3-wd-q5i" id="RXw-4v-WX3"/>
+                                <outlet property="heartImageView" destination="ozU-tr-GH6" id="CWv-45-J9N"/>
+                                <outlet property="nameLabel" destination="bFZ-cE-jRk" id="tDp-Gs-vd4"/>
+                                <outlet property="typeLabel" destination="FIp-rK-WkM" id="c4b-EQ-kOt"/>
+                            </connections>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BBR-TN-qiT">
@@ -175,7 +181,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="qze-OS-jH5"/>
                     <connections>
-                        <outlet property="headerView" destination="vYX-7i-oIx" id="E0G-Mf-b0w"/>
+                        <outlet property="headerView" destination="vYX-7i-oIx" id="CSI-Rf-3Hf"/>
+                        <outlet property="tabeleView" destination="cqw-vv-V5K" id="yf0-a2-iVI"/>
                     </connections>
                 </viewController>
             </objects>

@@ -14,15 +14,19 @@ class Restaurant {
     var name: String
     var type: String
     var location: String
+    var phone: String
+    var description: String
     var image: String
     var isVisited: Bool
     
     // Created a designated initializer that takes 5 input parameters when creating a new instance
     // Self is used to refer to the property of the class
-    init(name: String, type: String, location: String, image: String, isVisited: Bool) {
+    init(name: String, type: String, location: String, phone: String, description: String, image: String, isVisited: Bool) {
         self.name = name
         self.type = type
         self.location = location
+        self.phone = phone
+        self.description = description
         self.image = image
         self.isVisited = isVisited
     }
@@ -32,6 +36,7 @@ class Restaurant {
     // With convenience initializer -> Restaurant() = was to initalize an object
     // This saves time from typing all the initialization parameters when initializing an empty Restaurant object.
     convenience init() {
-        self.init(name: "", type: "", location: "", image: "", isVisited: false)
+        self.init(name: "", type: "", location: "", phone: "", description: "", image: "", isVisited: false)
     }
 }
+

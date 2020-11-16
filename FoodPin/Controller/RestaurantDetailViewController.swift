@@ -52,7 +52,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     // Create 3 rows in each section (1)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,6 +83,21 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             
             return cell
             
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailSeperatorCell.self), for: indexPath) as! RestaurantDetailSeperatorCell
+            cell.titleLabel.text = "HOW TO GET HERE"
+            cell.selectionStyle = .none
+            
+            return cell
+            
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+            
+            // Here we call the new configure method with the Restaurants objects parameter location
+            cell.configure(location: restaurant.location)
+            
+            return cell
+            
         default:
             fatalError("Failed to instantiate the table view cell for the detail view controller")
             
@@ -99,6 +114,14 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     // Change Status bar to light color
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destination as! MapViewController
+            
+            destinationController.restaurant = restaurant
+        }
     }
     
 

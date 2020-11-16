@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--FoodPin-->
+        <!--SAFoodie-->
         <scene sceneID="AC4-Hh-ata">
             <objects>
                 <tableViewController id="jJ1-Qt-DHP" customClass="RestaurantTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                             <outlet property="delegate" destination="jJ1-Qt-DHP" id="Fsq-Bv-ZE9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="aMX-pH-eA1">
+                    <navigationItem key="navigationItem" title="SAFoodie" id="aMX-pH-eA1">
                         <barButtonItem key="backBarButtonItem" title="  " id="pMX-SL-Jub"/>
                     </navigationItem>
                 </tableViewController>

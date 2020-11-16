@@ -1,5 +1,5 @@
 //
-//  RestaurantTableTableViewController.swift
+//  RestaurantTableViewController.swift
 //  FoodPin
 //
 //  Created by Blaine Beltran on 11/12/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantTableTableViewController: UITableViewController {
+class RestaurantTableViewController: UITableViewController {
     
     
     // Created an array of Restaurant objects instead of having mutiple arrays for each set of information
@@ -45,6 +45,17 @@ class RestaurantTableTableViewController: UITableViewController {
         
         tableView.cellLayoutMarginsFollowReadableWidth = true
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // Configure the navigation bar to be transparent by setting it to a blank UIImage -> UIImage()
+        // Then we configured the Text and its color
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        if let customFont = UIFont(name: "Quicksand", size: 40.0) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont]
+        }
+        
+        // Hide navigation bar on swipe for this controller
+        navigationController?.hidesBarsOnSwipe = true
         
 
     }
@@ -90,63 +101,6 @@ class RestaurantTableTableViewController: UITableViewController {
 
         return cell
     }
-    
-//    // Method to handle when you select an option (We dont need this right now becuase we implemented swipe actions)
-//    (We might need this later so I just commented it out)
-    
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        // Create an option menu as an action sheet
-//        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
-//
-//        if let popoverController = optionMenu.popoverPresentationController {
-//            if let cell = tableView.cellForRow(at: indexPath) {
-//                popoverController.sourceView = cell
-//                popoverController.sourceRect = cell.bounds
-//            }
-//        }
-//
-//        // Add actions to the menu
-//
-//        // The handler in nil on the cancelAction because we have no action needed after the user presses cancel
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        optionMenu.addAction(cancelAction)
-//
-//
-//        // This block of code is refered to as a "Closure" in swift (page 277 for reference)
-//        let callActionHandler = { (action:UIAlertAction!) -> Void in
-//            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(alertMessage, animated: true, completion: nil)
-//
-//        }
-//
-//        // The handler means we have a follow up action after the user presses "call"
-//        let callAction = UIAlertAction(title: "Call " + "210-345-\(indexPath.row)", style: .default, handler: callActionHandler)
-//        optionMenu.addAction(callAction)
-//
-//        // Here we create another alert action for checking in when a user presses on a restaurant
-//        let checkInTitle = self.restaurantIsVisited[indexPath.row] ? "Undo Check in" : "Check in"
-//        let checkInAction = UIAlertAction(title: checkInTitle, style: .default, handler: {
-//
-//            // Another closure line 91 - 95. This way of coding is preferred because it is more readable
-//            (action:UIAlertAction!) -> Void in
-//
-//            let cell = tableView.cellForRow(at: indexPath) as? RestaurantTableViewCell
-//            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none : .checkmark
-//
-//            // When a certain restaurant is checked we want to update the array
-//            self.restaurantIsVisited[indexPath.row] = true
-//        })
-//        optionMenu.addAction(checkInAction)
-//
-//        // Display menu
-//        present(optionMenu, animated: true, completion: nil)
-//
-//        // Deselect the row aka get rid of the grey selection when you press a row
-//        tableView.deselectRow(at: indexPath, animated: false)
-//    }
     
     // MARK: - Table view delegate
     
@@ -224,12 +178,17 @@ class RestaurantTableTableViewController: UITableViewController {
         }
         
         let CheckInIcon = restaurants[indexPath.row].isVisited ? "arrow.uturn.left" : "checkmark"
-        checkInAction.backgroundColor = UIColor(red: 38.0/255.0, green: 162.0/255.0, blue: 78.0/255.0, alpha: 1.0)
+        checkInAction.backgroundColor = UIColor(red: 38, green: 162, blue: 78)
         checkInAction.image = UIImage(systemName: CheckInIcon)
         
         let swipeConfifuration = UISwipeActionsConfiguration(actions: [checkInAction])
         
         return swipeConfifuration
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = true
     }
     
     // MARK: - Navigation

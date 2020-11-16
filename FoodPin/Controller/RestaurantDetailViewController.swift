@@ -21,6 +21,15 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         super.viewDidLoad()
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
+        // Pushes the table view upward 
+        tableView.contentInsetAdjustmentBehavior = .never
+        
+        // disable the swipe to hide feature
+        navigationController?.hidesBarsOnSwipe = false
         
         
         // Configure header view
@@ -31,7 +40,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         
         // Configure the table view in the detail of the restaurant
         tableView.delegate = self
-        //tableView.dataSource = self
+        tableView.dataSource = self
         tableView.separatorStyle = .none
     }
     
@@ -78,6 +87,18 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             fatalError("Failed to instantiate the table view cell for the detail view controller")
             
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    // Change Status bar to light color
+    override var preferredStatusBarStyle: UIStatusBarStyle{
+        return .lightContent
     }
     
 

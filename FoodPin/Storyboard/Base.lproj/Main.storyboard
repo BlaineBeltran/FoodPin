@@ -10,6 +10,9 @@
         <array key="Quicksand-Medium.ttf">
             <string>Quicksand-Medium</string>
         </array>
+        <array key="Quicksand-Regular.ttf">
+            <string>Quicksand-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--FoodPin-->
@@ -117,6 +120,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c6c-TM-PzC">
+                                    <rect key="frame" x="352" y="286" width="52" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="52" id="Orp-Nq-098"/>
+                                        <constraint firstAttribute="height" constant="50" id="Wrg-f5-0MN"/>
+                                    </constraints>
+                                </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-cE-jRk" userLabel="Name Label">
                                     <rect key="frame" x="14" y="269" width="90" height="44"/>
                                     <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="35"/>
@@ -157,15 +167,49 @@
                                 <constraint firstItem="odx-Zn-XDE" firstAttribute="leading" secondItem="vYX-7i-oIx" secondAttribute="leading" id="dgx-Lf-7mn"/>
                                 <constraint firstItem="odx-Zn-XDE" firstAttribute="top" secondItem="vYX-7i-oIx" secondAttribute="top" id="gDO-PZ-NTS"/>
                                 <constraint firstItem="QQ3-wd-q5i" firstAttribute="top" secondItem="vYX-7i-oIx" secondAttribute="top" id="i4Q-ED-W37"/>
+                                <constraint firstItem="FIp-rK-WkM" firstAttribute="bottom" secondItem="c6c-TM-PzC" secondAttribute="bottom" id="vNf-M2-lwB"/>
                                 <constraint firstItem="QQ3-wd-q5i" firstAttribute="leading" secondItem="vYX-7i-oIx" secondAttribute="leading" id="wCS-eC-sb8"/>
+                                <constraint firstAttribute="trailing" secondItem="c6c-TM-PzC" secondAttribute="trailing" constant="10" id="y84-vD-iYN"/>
                                 <constraint firstAttribute="bottom" secondItem="FIp-rK-WkM" secondAttribute="bottom" constant="14" id="zj3-xt-mjH"/>
                             </constraints>
                             <connections>
                                 <outlet property="headerImageView" destination="QQ3-wd-q5i" id="RXw-4v-WX3"/>
                                 <outlet property="heartImageView" destination="ozU-tr-GH6" id="CWv-45-J9N"/>
                                 <outlet property="nameLabel" destination="bFZ-cE-jRk" id="tDp-Gs-vd4"/>
+                                <outlet property="ratingImageView" destination="c6c-TM-PzC" id="C30-GL-NJe"/>
                                 <outlet property="typeLabel" destination="FIp-rK-WkM" id="c4b-EQ-kOt"/>
                             </connections>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="TWz-6h-Usw">
+                            <rect key="frame" x="0.0" y="754.5" width="414" height="90"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cF-eI-jZO">
+                                    <rect key="frame" x="15" y="22" width="384" height="47"/>
+                                    <color key="backgroundColor" red="0.94873636959999996" green="0.59265928010000002" blue="0.56438896009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="47" id="P1i-LI-EQQ"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                    <state key="normal" title="Rate it">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="25"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <segue destination="LhL-wl-sW7" kind="presentation" identifier="showReview" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="uED-Vb-N9z"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="4cF-eI-jZO" firstAttribute="leading" secondItem="TWz-6h-Usw" secondAttribute="leading" constant="15" id="ft5-4e-pgy"/>
+                                <constraint firstAttribute="trailing" secondItem="4cF-eI-jZO" secondAttribute="trailing" constant="15" id="hU1-lA-q6c"/>
+                                <constraint firstAttribute="bottom" secondItem="4cF-eI-jZO" secondAttribute="bottom" constant="21" id="iHy-2k-n3u"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailIconTextCell" id="BBR-TN-qiT" userLabel="RestaurantDetailIconTextCell" customClass="RestaurantDetailIconTextCell" customModule="FoodPin" customModuleProvider="target">
@@ -335,7 +379,101 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7x-Pp-JYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630.434782608696" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="2610" y="3"/>
+        </scene>
+        <!--Review View Controller-->
+        <scene sceneID="mEw-FN-dPm">
+            <objects>
+                <viewController id="LhL-wl-sW7" customClass="ReviewViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iwY-7A-sOk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y7o-58-Pew">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ8-Q1-XfX">
+                                <rect key="frame" x="363.5" y="44" width="30.5" height="29"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qs1-eJ-LTY" kind="unwind" unwindAction="closeWithSegue:" id="Op3-x2-ZHJ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dKn-Rl-44b">
+                                <rect key="frame" x="55" y="-13" width="304" height="922"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnT-B6-r7y">
+                                        <rect key="frame" x="0.0" y="0.0" width="265" height="164"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="50"/>
+                                        <state key="normal" title="Love" image="love"/>
+                                        <connections>
+                                            <segue destination="qs1-eJ-LTY" kind="unwind" identifier="love" unwindAction="rateRestaurantWithSegue:" id="iwc-s4-cJb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BSm-WM-1um">
+                                        <rect key="frame" x="0.0" y="174" width="261" height="166"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="50"/>
+                                        <state key="normal" title="Cool" image="cool"/>
+                                        <connections>
+                                            <segue destination="qs1-eJ-LTY" kind="unwind" identifier="cool" unwindAction="rateRestaurantWithSegue:" id="Quf-mk-C1A"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rhB-ac-1pt">
+                                        <rect key="frame" x="0.0" y="350" width="304" height="172"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="50"/>
+                                        <state key="normal" title="Happy" image="happy"/>
+                                        <connections>
+                                            <segue destination="qs1-eJ-LTY" kind="unwind" identifier="happy" unwindAction="rateRestaurantWithSegue:" id="6GC-Jg-ztf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixx-jG-h4g">
+                                        <rect key="frame" x="0.0" y="532" width="245" height="174"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="50"/>
+                                        <state key="normal" title="Sad" image="sad"/>
+                                        <connections>
+                                            <segue destination="qs1-eJ-LTY" kind="unwind" identifier="sad" unwindAction="rateRestaurantWithSegue:" id="ke5-e6-pZP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aW7-Qc-uRa">
+                                        <rect key="frame" x="0.0" y="716" width="287" height="206"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="50"/>
+                                        <state key="normal" title="Angry" image="angry"/>
+                                        <connections>
+                                            <segue destination="qs1-eJ-LTY" kind="unwind" identifier="angry" unwindAction="rateRestaurantWithSegue:" id="Izt-H2-OSa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bla-Zo-MXL" firstAttribute="trailing" secondItem="UJ8-Q1-XfX" secondAttribute="trailing" constant="20" id="3BD-Zt-ndb"/>
+                            <constraint firstAttribute="bottom" secondItem="y7o-58-Pew" secondAttribute="bottom" id="6wY-2p-8YW"/>
+                            <constraint firstItem="dKn-Rl-44b" firstAttribute="centerY" secondItem="iwY-7A-sOk" secondAttribute="centerY" id="Hus-DQ-iXy"/>
+                            <constraint firstItem="y7o-58-Pew" firstAttribute="top" secondItem="iwY-7A-sOk" secondAttribute="top" id="RJe-eL-3sI"/>
+                            <constraint firstItem="UJ8-Q1-XfX" firstAttribute="top" secondItem="bla-Zo-MXL" secondAttribute="top" id="RTY-xF-MuR"/>
+                            <constraint firstItem="y7o-58-Pew" firstAttribute="leading" secondItem="bla-Zo-MXL" secondAttribute="leading" id="VGZ-vx-Ua8"/>
+                            <constraint firstItem="dKn-Rl-44b" firstAttribute="centerX" secondItem="iwY-7A-sOk" secondAttribute="centerX" id="e65-Co-fgS"/>
+                            <constraint firstItem="y7o-58-Pew" firstAttribute="trailing" secondItem="bla-Zo-MXL" secondAttribute="trailing" id="rGq-ub-ueA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bla-Zo-MXL"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="y7o-58-Pew" id="gAt-4i-fmK"/>
+                        <outletCollection property="rateButtons" destination="LnT-B6-r7y" collectionClass="NSMutableArray" id="Uac-hs-w8i"/>
+                        <outletCollection property="rateButtons" destination="BSm-WM-1um" collectionClass="NSMutableArray" id="BTw-q4-aAB"/>
+                        <outletCollection property="rateButtons" destination="rhB-ac-1pt" collectionClass="NSMutableArray" id="2Th-zv-CPb"/>
+                        <outletCollection property="rateButtons" destination="ixx-jG-h4g" collectionClass="NSMutableArray" id="bnV-0U-V2t"/>
+                        <outletCollection property="rateButtons" destination="aW7-Qc-uRa" collectionClass="NSMutableArray" id="BTr-8M-stu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flO-cc-rTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="qs1-eJ-LTY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3395.652173913044" y="2.6785714285714284"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bvj-uL-1hB">
@@ -356,4 +494,12 @@
             <point key="canvasLocation" x="66.666666666666671" y="2.6785714285714284"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="angry" width="78" height="103"/>
+        <image name="cool" width="78" height="83"/>
+        <image name="happy" width="78" height="86"/>
+        <image name="love" width="78" height="82"/>
+        <image name="sad" width="78" height="87"/>
+        <image name="xmark" catalog="system" width="64" height="56"/>
+    </resources>
 </document>

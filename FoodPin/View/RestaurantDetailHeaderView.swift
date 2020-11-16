@@ -10,6 +10,7 @@ import UIKit
 
 class RestaurantDetailHeaderView: UIView {
     @IBOutlet var headerImageView: UIImageView!
+    @IBOutlet var ratingImageView: UIImageView!
     @IBOutlet var nameLabel: UILabel! {
         
         // This is so the name label will not truncate because the numbers of lines is 0

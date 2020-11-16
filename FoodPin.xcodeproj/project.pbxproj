@@ -28,6 +28,7 @@
 		CE6A924F25605B9D009FA8A4 /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE6A924D25605B9C009FA8A4 /* Quicksand-SemiBold.ttf */; };
 		CE6A925025605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE6A924E25605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf */; };
 		CE6A925425608F85009FA8A4 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A925325608F85009FA8A4 /* RestaurantDetailHeaderView.swift */; };
+		CE875D9D256332F00056A1D6 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE875D9C256332F00056A1D6 /* ReviewViewController.swift */; };
 		CEA01FA42561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA01FA32561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift */; };
 		CEA01FA62561BFC4009C05B8 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA01FA52561BFC4009C05B8 /* RestaurantDetailTextCell.swift */; };
 		CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */; };
@@ -57,6 +58,7 @@
 		CE6A924D25605B9C009FA8A4 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		CE6A924E25605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		CE6A925325608F85009FA8A4 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
+		CE875D9C256332F00056A1D6 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		CEA01FA32561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		CEA01FA52561BFC4009C05B8 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				CE0E017C255DD5F90046F273 /* RestaurantTableViewController.swift */,
 				CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */,
 				CE5888352562E1D500AA0ABA /* MapViewController.swift */,
+				CE875D9C256332F00056A1D6 /* ReviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				CE58882D2562CFE300AA0ABA /* UINavigationController+Ext.swift in Sources */,
 				CE0E017F255DE21E0046F273 /* RestaurantTableViewCell.swift in Sources */,
+				CE875D9D256332F00056A1D6 /* ReviewViewController.swift in Sources */,
 				CEA01FA62561BFC4009C05B8 /* RestaurantDetailTextCell.swift in Sources */,
 				CE0E017D255DD5F90046F273 /* RestaurantTableViewController.swift in Sources */,
 				CE6A923725604830009FA8A4 /* Restaurant.swift in Sources */,

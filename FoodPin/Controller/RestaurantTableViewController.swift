@@ -102,6 +102,11 @@ class RestaurantTableViewController: UITableViewController {
         return cell
     }
     
+    // Method to go back when adding a restaurant
+    @IBAction func unwindToHome(segue: UIStoryboardSegue) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Table view delegate
     
     // Method for swiping action to the left

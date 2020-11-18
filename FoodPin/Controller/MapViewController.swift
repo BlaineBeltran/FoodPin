@@ -13,17 +13,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet var mapView: MKMapView!
     
-    var restaurant = Restaurant()
+    var restaurant: RestaurantMO!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Map Customizations
         // Here we define MapViewController as a delegate object of mapView
         mapView.delegate = self
+        mapView.showsCompass = true
+        mapView.showsScale = true
+        mapView.showsTraffic = true
+        
+        
 
         // Convert address to coordinate and annotate it on map
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(restaurant.location, completionHandler: { placemarks, error in
+        geoCoder.geocodeAddressString(restaurant.location ?? "", completionHandler: { placemarks, error in
             if let error = error {
                 print(error)
                 return
@@ -49,10 +55,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             }
         })
         
-        // Map Customizations
-        mapView.showsCompass = true
-        mapView.showsScale = true
-        mapView.showsTraffic = true
     }
     
     // Every time when the map view needs to display an annotation, the method below will be called

@@ -102,8 +102,30 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyRestaurantView" destination="NSm-yB-Sk4" id="i12-HO-iMC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3j-cJ-Szh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="NSm-yB-Sk4">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="apM-xq-zbg">
+                            <rect key="frame" x="28" y="172" width="358" height="398.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="apM-xq-zbg" secondAttribute="height" multiplier="80:89" id="OIx-QK-kNd"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="apM-xq-zbg" firstAttribute="leading" secondItem="gPB-mm-uOh" secondAttribute="leading" constant="28" id="BdQ-Tq-Uqb"/>
+                        <constraint firstItem="gPB-mm-uOh" firstAttribute="trailing" secondItem="apM-xq-zbg" secondAttribute="trailing" constant="28" id="ZeG-dL-dkZ"/>
+                        <constraint firstItem="apM-xq-zbg" firstAttribute="top" secondItem="gPB-mm-uOh" secondAttribute="top" constant="128" id="kUM-2t-kjo"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="gPB-mm-uOh"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="976.81159420289862" y="2.6785714285714284"/>
         </scene>
@@ -544,6 +566,9 @@
                                                 <constraint firstItem="Q5p-dR-hrV" firstAttribute="top" secondItem="tT9-i1-mj5" secondAttribute="topMargin" constant="5" id="tz6-Qc-41k"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="88" id="FBg-qa-6GR">
                                         <rect key="frame" x="0.0" y="316" width="414" height="88"/>
@@ -693,6 +718,12 @@
                                 <segue destination="8sp-gn-8ww" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="qIt-LM-Gfo"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="arrow.down.doc" catalog="system" id="rMG-i2-6RV">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveButtonTappedWithSender:" destination="F1b-iC-y6e" id="y19-ly-Cze"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="pvW-SX-lvw" id="YC1-Ph-n7X"/>
@@ -747,7 +778,9 @@
     </scenes>
     <resources>
         <image name="angry" width="78" height="103"/>
+        <image name="arrow.down.doc" catalog="system" width="56" height="64"/>
         <image name="cool" width="78" height="83"/>
+        <image name="empty" width="310" height="372"/>
         <image name="happy" width="78" height="86"/>
         <image name="love" width="78" height="82"/>
         <image name="photo" catalog="system" width="64" height="46"/>

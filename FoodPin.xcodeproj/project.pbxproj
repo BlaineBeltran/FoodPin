@@ -31,6 +31,7 @@
 		CE6A925025605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE6A924E25605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf */; };
 		CE6A925425608F85009FA8A4 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6A925325608F85009FA8A4 /* RestaurantDetailHeaderView.swift */; };
 		CE875D9D256332F00056A1D6 /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE875D9C256332F00056A1D6 /* ReviewViewController.swift */; };
+		CE9EE93D25647C4F00083710 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE9EE93B25647C4F00083710 /* FoodPin.xcdatamodeld */; };
 		CEA01FA42561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA01FA32561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift */; };
 		CEA01FA62561BFC4009C05B8 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA01FA52561BFC4009C05B8 /* RestaurantDetailTextCell.swift */; };
 		CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */; };
@@ -63,6 +64,7 @@
 		CE6A924E25605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Quicksand-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		CE6A925325608F85009FA8A4 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		CE875D9C256332F00056A1D6 /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		CE9EE93C25647C4F00083710 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		CEA01FA32561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		CEA01FA52561BFC4009C05B8 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				CE23B222255D9D4100B952DC /* SceneDelegate.swift */,
 				CE23B229255D9D4200B952DC /* Assets.xcassets */,
 				CE23B22E255D9D4200B952DC /* Info.plist */,
+				CE9EE93B25647C4F00083710 /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				CE23B223255D9D4100B952DC /* SceneDelegate.swift in Sources */,
 				CEA01FA42561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift in Sources */,
 				CE5888362562E1D500AA0ABA /* MapViewController.swift in Sources */,
+				CE9EE93D25647C4F00083710 /* FoodPin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +490,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE9EE93B25647C4F00083710 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE9EE93C25647C4F00083710 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = CE9EE93C25647C4F00083710 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE23B215255D9D4100B952DC /* Project object */;
 }

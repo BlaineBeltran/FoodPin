@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    var restaurant: RestaurantMO!
     
     /*
      Creating Outlets for the text fields in the new restaurant screen
@@ -63,6 +66,10 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         if let customFont = UIFont(name: "Quicksand", size: 35.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont ]
         }
+        
+        // Disable the seperator
+        tableView.separatorStyle = .none
+        
     }
 
     // MARK: - Table view data source
@@ -83,7 +90,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     // Check to see if the first cell is selected
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo", preferredStyle: .actionSheet)
+            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
             
             /*/
              Remember when accessing the camer/photo library We also need to explicitly describe the reason why the app accesses the user's photo library/Camera in the Info.plist file and add two keys (NSPhotoLibraryUsageDescription and NSCameraUsageDescription) in order to avoid access errors
@@ -129,6 +136,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         }
     }
     
+    // MARK: - UIImagePickerControllerDelegate methods
+    
     // Update the image after selecting one
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
@@ -152,6 +161,49 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         
         let bottomConstraint = NSLayoutConstraint(item: photoImageView as Any, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
         bottomConstraint.isActive = true
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Action Method
+    
+    @IBAction func saveButtonTapped(sender: AnyObject) {
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+            restaurant.name = nameTextField.text
+            restaurant.type = typeTextField.text
+            restaurant.location = addressTextField.text
+            restaurant.phone = phoneTextField.text
+            restaurant.summary = descriptionTextView.text
+            restaurant.isVisited = false
+            
+            if let restaurantImage = photoImageView.image {
+                restaurant.image = restaurantImage.pngData()
+            }
+            
+            print("Saving data to context ...")
+            appDelegate.saveContext()
+        }
+        
+        
+        
+        
+        
+        if nameTextField.text == "" || typeTextField.text == "" || addressTextField.text == "" || phoneTextField.text == "" || descriptionTextView.text == "" {
+            let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one or more of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(alertAction)
+            present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        print("Name: \(nameTextField.text ?? "")")
+        print("Type: \(typeTextField.text ?? "")")
+        print("Location \(addressTextField.text ?? "")")
+        print("Phone \(phoneTextField.text ?? "")")
+        print("Description \(descriptionTextView.text ?? "")")
         
         dismiss(animated: true, completion: nil)
     }

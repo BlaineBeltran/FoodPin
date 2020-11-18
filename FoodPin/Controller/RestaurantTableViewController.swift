@@ -9,12 +9,18 @@
 import UIKit
 import CoreData
 
-class RestaurantTableViewController: UITableViewController , NSFetchedResultsControllerDelegate{
+class RestaurantTableViewController: UITableViewController , NSFetchedResultsControllerDelegate, UISearchResultsUpdating {
     
     
     // Created an array of Restaurant objects instead of having mutiple arrays for each set of information
     var restaurants: [RestaurantMO] = []
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
+    
+    // Declare the search controller variable
+    var searchController: UISearchController!
+    
+    // variable to store search results
+    var searchResults: [RestaurantMO] = []
     
     @IBOutlet var emptyRestaurantView: UIView!
     
@@ -70,6 +76,19 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
                 print(error)
             }
         }
+        
+        // Search Bar
+        searchController = UISearchController(searchResultsController: nil)
+        // Adds the search bar to the table header
+        tableView.tableHeaderView = searchController.searchBar
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.barTintColor = .white
+        searchController.searchBar.backgroundImage = UIImage()
+        searchController.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,9 +112,14 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         return 1
     }
     
-    // The section will get the count from the restaurants array to determine how many rows
+    // The section will get the count from the restaurants array to determine how many rows to show or
+    // to show the results when the search bar is active
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restaurants.count
+        if searchController.isActive {
+            return searchResults.count
+        } else {
+            return restaurants.count
+        }
     }
     
     // Method for handling the information for each row
@@ -104,6 +128,9 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "datacell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
+        
+        // Determine if we get the restaurant from the search results or the original array
+        let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
 
         // Configure the cell...
         // We go into the restaurants array and choose the correct parameter of the given object by using the dot syntax
@@ -128,6 +155,25 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         // cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
 
         return cell
+    }
+    
+    // Method to filter search results for name and location
+    func filterContent(for searchText: String) {
+        searchResults = restaurants.filter({ (restaurant) -> Bool in
+            if let name = restaurant.name, let location = restaurant.location {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
+                return isMatch
+            }
+            return false
+        })
+    }
+    
+    // Update the search results to display
+    func updateSearchResults(for searchController: UISearchController) {
+        if let searchText = searchController.searchBar.text {
+            filterContent(for: searchText)
+            tableView.reloadData()
+        }
     }
     
     
@@ -219,6 +265,15 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         return swipeConfifuration
     }
     
+    // Disable the action on the search content
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if searchController.isActive {
+            return false
+        } else {
+            return true
+        }
+    }
+    
     
     // MARK: - Navigation
     
@@ -228,7 +283,7 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
-                destinationController.restaurant = restaurants[indexPath.row]
+                destinationController.restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
             }
         }
     }

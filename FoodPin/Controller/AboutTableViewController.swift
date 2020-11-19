@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AboutTableViewController: UITableViewController {
     
@@ -67,15 +68,39 @@ class AboutTableViewController: UITableViewController {
         case 0:
             if indexPath.row == 0 {
                 if let url = URL(string: link) {
-                    UIApplication.shared.open(url)
+                    let safariController = SFSafariViewController(url: url)
+                    present(safariController, animated: true, completion: nil)
+                }
+            } else if indexPath.row == 1 {
+                if let url = URL(string: link) {
+                    let safariController = SFSafariViewController(url: url)
+                    present(safariController, animated: true, completion: nil)
                 }
             }
+        // Follow us section presented in the SFSafariViewController (allows for safari features)
+        case 1:
+            if let url = URL(string: link) {
+                let safariController = SFSafariViewController(url: url)
+                present(safariController, animated: true, completion: nil)
+            }
+            
+            
         default:
             break
         }
         
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    
+    // This method will find the link of the selected item and ppass it to the web view controller
+    // by setting the targetURL property
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showWebView" {
+//            if let destinationController = segue.destination as? WebViewController, let indexPath = tableView.indexPathForSelectedRow {
+//                destinationController.targetURL = sectionContent[indexPath.section][indexPath.row].link
+//            }
+//        }
+//    }
 
 
 }

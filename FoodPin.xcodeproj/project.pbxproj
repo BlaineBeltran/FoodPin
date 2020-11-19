@@ -14,6 +14,7 @@
 		CE23B228255D9D4100B952DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B226255D9D4100B952DC /* Main.storyboard */; };
 		CE23B22A255D9D4200B952DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE23B229255D9D4200B952DC /* Assets.xcassets */; };
 		CE23B22D255D9D4200B952DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B22B255D9D4200B952DC /* LaunchScreen.storyboard */; };
+		CE24728C25670EB30072A1CF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24728B25670EB30072A1CF /* WebViewController.swift */; };
 		CE45ED4D2564263D00C4AF8E /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45ED4C2564263D00C4AF8E /* RoundedTextField.swift */; };
 		CE45ED4F2564296900C4AF8E /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45ED4E2564296900C4AF8E /* NewRestaurantController.swift */; };
 		CE58882B2562CE1B00AA0ABA /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58882A2562CE1B00AA0ABA /* UIColor+Ext.swift */; };
@@ -42,18 +43,21 @@
 		CEB8C18F256574C300D0D660 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8C18E256574C300D0D660 /* Onboarding.storyboard */; };
 		CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */; };
 		CEB8C19325657CD800D0D660 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */; };
+		CEF7182325671A1200C5FD4E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF7182225671A1200C5FD4E /* CloudKit.framework */; };
+		CEF718262567236100C5FD4E /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF718252567236100C5FD4E /* DiscoverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE0E017C255DD5F90046F273 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
-		CE23B21D255D9D4100B952DC /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE23B21D255D9D4100B952DC /* SAFoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAFoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE23B220255D9D4100B952DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE23B222255D9D4100B952DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE23B227255D9D4100B952DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE23B229255D9D4200B952DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE23B22C255D9D4200B952DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE23B22E255D9D4200B952DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE24728B25670EB30072A1CF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE45ED4C2564263D00C4AF8E /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		CE45ED4E2564296900C4AF8E /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		CE58882A2562CE1B00AA0ABA /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -82,6 +86,9 @@
 		CEB8C18E256574C300D0D660 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		CEF7182225671A1200C5FD4E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		CEF7182425671C7E00C5FD4E /* SAFoodie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SAFoodie.entitlements; sourceTree = "<group>"; };
+		CEF718252567236100C5FD4E /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE5888302562D48400AA0ABA /* MapKit.framework in Frameworks */,
+				CEF7182325671A1200C5FD4E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +116,7 @@
 		CE23B21E255D9D4100B952DC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE23B21D255D9D4100B952DC /* FoodPin.app */,
+				CE23B21D255D9D4100B952DC /* SAFoodie.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +124,7 @@
 		CE23B21F255D9D4100B952DC /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				CEF7182425671C7E00C5FD4E /* SAFoodie.entitlements */,
 				CE5888292562CDFA00AA0ABA /* Extensions */,
 				CE6A923D25605AEA009FA8A4 /* Resources */,
 				CE6A923B256054F6009FA8A4 /* View */,
@@ -144,6 +153,7 @@
 		CE58882E2562D48400AA0ABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CEF7182225671A1200C5FD4E /* CloudKit.framework */,
 				CE58882F2562D48400AA0ABA /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -160,6 +170,8 @@
 				CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */,
 				CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */,
 				CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */,
+				CE24728B25670EB30072A1CF /* WebViewController.swift */,
+				CEF718252567236100C5FD4E /* DiscoverTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -236,7 +248,7 @@
 			);
 			name = FoodPin;
 			productName = FoodPin;
-			productReference = CE23B21D255D9D4100B952DC /* FoodPin.app */;
+			productReference = CE23B21D255D9D4100B952DC /* SAFoodie.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -306,6 +318,7 @@
 				CEA01FA62561BFC4009C05B8 /* RestaurantDetailTextCell.swift in Sources */,
 				CE0E017D255DD5F90046F273 /* RestaurantTableViewController.swift in Sources */,
 				CE6A923725604830009FA8A4 /* Restaurant.swift in Sources */,
+				CEF718262567236100C5FD4E /* DiscoverTableViewController.swift in Sources */,
 				CE6A925425608F85009FA8A4 /* RestaurantDetailHeaderView.swift in Sources */,
 				CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */,
 				CE45ED4F2564296900C4AF8E /* NewRestaurantController.swift in Sources */,
@@ -313,6 +326,7 @@
 				CE5888342562D9B400AA0ABA /* RestaurantDetailMapCell.swift in Sources */,
 				CEB204902566CE4F00ACC284 /* AboutTableViewController.swift in Sources */,
 				CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */,
+				CE24728C25670EB30072A1CF /* WebViewController.swift in Sources */,
 				CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */,
 				CE45ED4D2564263D00C4AF8E /* RoundedTextField.swift in Sources */,
 				CEB204842566B4C500ACC284 /* WalkthroughViewController.swift in Sources */,
@@ -472,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/SAFoodie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GP3JFMJA3W;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -480,7 +495,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Blaine.FoodPin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SAFoodie;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -490,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/SAFoodie.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GP3JFMJA3W;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -498,7 +514,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = Blaine.FoodPin;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SAFoodie;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

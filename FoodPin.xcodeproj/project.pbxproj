@@ -38,6 +38,7 @@
 		CEB204842566B4C500ACC284 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */; };
 		CEB2048C2566CBB800ACC284 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2048A2566CBB800ACC284 /* About.storyboard */; };
 		CEB2048E2566CBEC00ACC284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2048D2566CBEC00ACC284 /* Discover.storyboard */; };
+		CEB204902566CE4F00ACC284 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */; };
 		CEB8C18F256574C300D0D660 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8C18E256574C300D0D660 /* Onboarding.storyboard */; };
 		CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */; };
 		CEB8C19325657CD800D0D660 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */; };
@@ -77,6 +78,7 @@
 		CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		CEB2048B2566CBB800ACC284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
 		CEB2048D2566CBEC00ACC284 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		CEB8C18E256574C300D0D660 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */,
 				CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */,
 				CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */,
+				CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				CE45ED4F2564296900C4AF8E /* NewRestaurantController.swift in Sources */,
 				CE5888322562D8E500AA0ABA /* RestaurantDetailSeperatorCell.swift in Sources */,
 				CE5888342562D9B400AA0ABA /* RestaurantDetailMapCell.swift in Sources */,
+				CEB204902566CE4F00ACC284 /* AboutTableViewController.swift in Sources */,
 				CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */,
 				CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */,
 				CE45ED4D2564263D00C4AF8E /* RoundedTextField.swift in Sources */,

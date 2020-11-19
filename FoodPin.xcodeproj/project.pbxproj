@@ -35,6 +35,9 @@
 		CEA01FA42561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA01FA32561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift */; };
 		CEA01FA62561BFC4009C05B8 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA01FA52561BFC4009C05B8 /* RestaurantDetailTextCell.swift */; };
 		CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */; };
+		CEB204842566B4C500ACC284 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */; };
+		CEB2048C2566CBB800ACC284 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2048A2566CBB800ACC284 /* About.storyboard */; };
+		CEB2048E2566CBEC00ACC284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2048D2566CBEC00ACC284 /* Discover.storyboard */; };
 		CEB8C18F256574C300D0D660 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8C18E256574C300D0D660 /* Onboarding.storyboard */; };
 		CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */; };
 		CEB8C19325657CD800D0D660 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */; };
@@ -71,6 +74,9 @@
 		CEA01FA32561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		CEA01FA52561BFC4009C05B8 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
 		CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		CEB2048B2566CBB800ACC284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		CEB2048D2566CBEC00ACC284 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		CEB8C18E256574C300D0D660 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 				CE6A9239256054D0009FA8A4 /* Storyboard */,
 				CE6A923825605494009FA8A4 /* Controller */,
 				CE23B220255D9D4100B952DC /* AppDelegate.swift */,
+				CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */,
 				CE23B222255D9D4100B952DC /* SceneDelegate.swift */,
 				CE23B229255D9D4200B952DC /* Assets.xcassets */,
 				CE23B22E255D9D4200B952DC /* Info.plist */,
@@ -144,12 +151,12 @@
 			isa = PBXGroup;
 			children = (
 				CE0E017C255DD5F90046F273 /* RestaurantTableViewController.swift */,
-				CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */,
 				CE5888352562E1D500AA0ABA /* MapViewController.swift */,
 				CE875D9C256332F00056A1D6 /* ReviewViewController.swift */,
 				CE45ED4E2564296900C4AF8E /* NewRestaurantController.swift */,
 				CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */,
 				CEB8C19225657CD800D0D660 /* WalkthroughPageViewController.swift */,
+				CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -158,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				CE23B226255D9D4100B952DC /* Main.storyboard */,
+				CEB2048A2566CBB800ACC284 /* About.storyboard */,
+				CEB2048D2566CBEC00ACC284 /* Discover.storyboard */,
 				CE23B22B255D9D4200B952DC /* LaunchScreen.storyboard */,
 				CEB8C18E256574C300D0D660 /* Onboarding.storyboard */,
 			);
@@ -270,6 +279,8 @@
 				CE6A924F25605B9D009FA8A4 /* Quicksand-SemiBold.ttf in Resources */,
 				CE23B22A255D9D4200B952DC /* Assets.xcassets in Resources */,
 				CE6A924C25605B8F009FA8A4 /* Quicksand-Regular.ttf in Resources */,
+				CEB2048E2566CBEC00ACC284 /* Discover.storyboard in Resources */,
+				CEB2048C2566CBB800ACC284 /* About.storyboard in Resources */,
 				CE23B228255D9D4100B952DC /* Main.storyboard in Resources */,
 				CE6A924925605B8F009FA8A4 /* Quicksand-Light.ttf in Resources */,
 				CE6A924A25605B8F009FA8A4 /* Quicksand-Bold.ttf in Resources */,
@@ -300,6 +311,7 @@
 				CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */,
 				CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */,
 				CE45ED4D2564263D00C4AF8E /* RoundedTextField.swift in Sources */,
+				CEB204842566B4C500ACC284 /* WalkthroughViewController.swift in Sources */,
 				CE58882B2562CE1B00AA0ABA /* UIColor+Ext.swift in Sources */,
 				CE23B223255D9D4100B952DC /* SceneDelegate.swift in Sources */,
 				CEA01FA42561BE6D009C05B8 /* RestaurantDetailIconTextCell.swift in Sources */,
@@ -325,6 +337,14 @@
 				CE23B22C255D9D4200B952DC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEB2048A2566CBB800ACC284 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEB2048B2566CBB800ACC284 /* Base */,
+			);
+			name = About.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

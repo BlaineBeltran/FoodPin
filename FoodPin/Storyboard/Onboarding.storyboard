@@ -23,11 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-264" y="601"/>
         </scene>
-        <!--Walk Through View Controller-->
+        <!--Walkthrough View Controller-->
         <scene sceneID="TLS-iI-kGR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0fh-3G-jyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="WalkThroughViewController" id="jYb-5q-3ud" customClass="WalkThroughViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughViewController" id="jYb-5q-3ud" customClass="WalkthroughViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cPj-Lb-Myp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +59,9 @@
                                                 <state key="normal" title="NEXT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonTappedWithSender:" destination="jYb-5q-3ud" eventType="touchUpInside" id="3li-TD-pYg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcd-6i-i9w">
                                                 <rect key="frame" x="0.0" y="127" width="190" height="33"/>
@@ -67,6 +69,9 @@
                                                 <state key="normal" title="Skip">
                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="skipButtonTappedWithSender:" destination="jYb-5q-3ud" eventType="touchUpInside" id="76N-0h-tj3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -97,13 +102,13 @@
                         <outlet property="skipButton" destination="Vcd-6i-i9w" id="S3y-P8-23x"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fh-3G-jyL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="541" y="3"/>
         </scene>
         <!--Walkthrough Content View Controller-->
         <scene sceneID="4xx-EE-8s8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VpM-Rw-nJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="WalkthroughContentViewController" id="0hz-HX-gcV" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OiM-iB-SUP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
@@ -145,6 +150,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="RUG-E1-vHk" secondAttribute="trailing" constant="24" id="Oam-de-NrQ"/>
                             <constraint firstItem="RUG-E1-vHk" firstAttribute="leading" secondItem="OiM-iB-SUP" secondAttribute="leadingMargin" constant="24" id="gaN-7U-at4"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="sw0-o7-rTA"/>
                     </view>
                     <size key="freeformSize" width="414" height="623"/>
                     <connections>
@@ -153,6 +159,7 @@
                         <outlet property="subHeadingLabel" destination="aTG-QU-s2e" id="HOn-x4-oIN"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VpM-Rw-nJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1300" y="-131"/>
         </scene>

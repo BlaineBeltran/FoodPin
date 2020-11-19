@@ -96,6 +96,20 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         
         navigationController?.hidesBarsOnSwipe = true
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        // Check the user defaults key for hasViewedWalkthrouhg. The walkthrough screens will only appear
+        // if the key is false
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughViewController") as? WalkthroughViewController {
+            
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
+    }
 
     // MARK: - Table view data source
     
@@ -134,10 +148,10 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
 
         // Configure the cell...
         // We go into the restaurants array and choose the correct parameter of the given object by using the dot syntax
-        cell.nameLabel.text = restaurants[indexPath.row].name
-        cell.locationLabel.text = restaurants[indexPath.row].location
-        cell.typeLabel.text = restaurants[indexPath.row].type
-        if let restaurantImage = restaurants[indexPath.row].image {
+        cell.nameLabel.text = restaurant.name
+        cell.locationLabel.text = restaurant.location
+        cell.typeLabel.text = restaurant.type
+        if let restaurantImage = restaurant.image {
             cell.thumbnailImageView.image = UIImage(data: restaurantImage as Data)
         }
         
@@ -145,7 +159,7 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
         // If it is true, we set the accessory type of the cell to have a check mark
         // If not, then we set it to none.
         // This fixes the bug when reusing cells and not updating the accessory type
-        if restaurants[indexPath.row].isVisited {
+        if restaurant.isVisited {
             cell.accessoryType = .checkmark
         } else {
             cell.accessoryType = .none
@@ -284,6 +298,9 @@ class RestaurantTableViewController: UITableViewController , NSFetchedResultsCon
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
                 destinationController.restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
+                
+                // Hide the nav bar but selecting a restaurant
+                destinationController.hidesBottomBarWhenPushed = true
             }
         }
     }

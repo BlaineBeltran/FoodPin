@@ -7,8 +7,14 @@
 //
 
 import UIKit
+protocol WalkthroughPageViewControllerDelegate: class {
+    func didUpdatePageIndex(currentIndex: Int)
+}
 
-class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+    
+    // use the weak keyword to prevent memory leak
+    weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
     
     var pageHeadings = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREAT RESTAURANTS"]
     var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3"]
@@ -26,6 +32,8 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         if let startingViewController = contentViewController(at: 0) {
             setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
         }
+        
+        delegate = self
     }
     
     
@@ -40,7 +48,7 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         
         // Create a new view controller and pass suitable data.
         let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        if let pageContentViewController = storyboard.instantiateViewController(withIdentifier: "walkthroughContentViewController") as? WalkthroughContentViewController {
+        if let pageContentViewController = storyboard.instantiateViewController(withIdentifier: "WalkthroughContentViewController") as? WalkthroughContentViewController {
             
             pageContentViewController.imageFile = pageImages[index]
             pageContentViewController.heading = pageHeadings[index]
@@ -73,6 +81,28 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         index += 1
         
         return contentViewController(at: index)
+    }
+    
+    // Move to the next walkthough screen when the next button is tapped
+    // When this method is called it automatically creates the next content view controller.
+    // If the controller can be created, we call the built-in setViewControllers method and navigate to the next view
+    // Controller
+    func forwardPage() {
+        currentIndex += 1
+        if let nextViewController = contentViewController(at: currentIndex) {
+            setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
+    // Handle updating the walkthouhg screen when swiping
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            if let contentViewController = pageViewController.viewControllers?.first as? WalkthroughContentViewController {
+                currentIndex = contentViewController.index
+                
+                walkthroughDelegate?.didUpdatePageIndex(currentIndex: contentViewController.index)
+            }
+        }
     }
 
 }

@@ -19,13 +19,13 @@ class DiscoverTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        spinner.style = .medium
+        spinner.style = .large
         spinner.hidesWhenStopped = true
         view.addSubview(spinner)
         
         // Define layout Contraints for the spinner
         spinner.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([ spinner.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 150.0), spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
+        NSLayoutConstraint.activate([ spinner.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 300.0), spinner.centerXAnchor.constraint(equalTo: view.centerXAnchor)])
         
         // Activate the spinner
         spinner.startAnimating()

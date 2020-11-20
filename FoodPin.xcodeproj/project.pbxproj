@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		CE0E017D255DD5F90046F273 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E017C255DD5F90046F273 /* RestaurantTableViewController.swift */; };
 		CE0E017F255DE21E0046F273 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */; };
+		CE1CE75625682B58001DFE14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE1CE75425682B58001DFE14 /* Localizable.strings */; };
+		CE1CE75925682B58001DFE14 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE1CE75725682B58001DFE14 /* InfoPlist.strings */; };
+		CE1CE75C25682D0D001DFE14 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1CE75E25682D0D001DFE14 /* Discover.storyboard */; };
 		CE23B221255D9D4100B952DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23B220255D9D4100B952DC /* AppDelegate.swift */; };
 		CE23B223255D9D4100B952DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23B222255D9D4100B952DC /* SceneDelegate.swift */; };
 		CE23B228255D9D4100B952DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE23B226255D9D4100B952DC /* Main.storyboard */; };
@@ -39,7 +42,6 @@
 		CEA801C3255F40540036687B /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */; };
 		CEB204842566B4C500ACC284 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */; };
 		CEB2048C2566CBB800ACC284 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2048A2566CBB800ACC284 /* About.storyboard */; };
-		CEB2048E2566CBEC00ACC284 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB2048D2566CBEC00ACC284 /* Discover.storyboard */; };
 		CEB204902566CE4F00ACC284 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */; };
 		CEB8C18F256574C300D0D660 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB8C18E256574C300D0D660 /* Onboarding.storyboard */; };
 		CEB8C19125657B0C00D0D660 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */; };
@@ -51,6 +53,13 @@
 /* Begin PBXFileReference section */
 		CE0E017C255DD5F90046F273 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		CE0E017E255DE21E0046F273 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		CE1CE75525682B58001DFE14 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		CE1CE75825682B58001DFE14 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		CE1CE75A25682B99001DFE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE1CE75B25682B99001DFE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CE1CE75D25682D0D001DFE14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
+		CE1CE76025682D29001DFE14 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Discover.strings"; sourceTree = "<group>"; };
+		CE1CE76225682D29001DFE14 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Discover.strings; sourceTree = "<group>"; };
 		CE23B21D255D9D4100B952DC /* SAFoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SAFoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE23B220255D9D4100B952DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE23B222255D9D4100B952DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +98,6 @@
 		CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		CEB204832566B4C500ACC284 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
 		CEB2048B2566CBB800ACC284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
-		CEB2048D2566CBEC00ACC284 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		CEB8C18E256574C300D0D660 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		CEB8C19025657B0C00D0D660 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +152,8 @@
 				CE23B222255D9D4100B952DC /* SceneDelegate.swift */,
 				CE23B229255D9D4200B952DC /* Assets.xcassets */,
 				CE23B22E255D9D4200B952DC /* Info.plist */,
+				CE1CE75725682B58001DFE14 /* InfoPlist.strings */,
+				CE1CE75425682B58001DFE14 /* Localizable.strings */,
 				CE9EE93B25647C4F00083710 /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
@@ -189,7 +199,7 @@
 			children = (
 				CE23B226255D9D4100B952DC /* Main.storyboard */,
 				CEB2048A2566CBB800ACC284 /* About.storyboard */,
-				CEB2048D2566CBEC00ACC284 /* Discover.storyboard */,
+				CE1CE75E25682D0D001DFE14 /* Discover.storyboard */,
 				CE23B22B255D9D4200B952DC /* LaunchScreen.storyboard */,
 				CEB8C18E256574C300D0D660 /* Onboarding.storyboard */,
 			);
@@ -301,14 +311,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE23B22D255D9D4200B952DC /* LaunchScreen.storyboard in Resources */,
+				CE1CE75925682B58001DFE14 /* InfoPlist.strings in Resources */,
 				CEB8C18F256574C300D0D660 /* Onboarding.storyboard in Resources */,
 				CE6A924F25605B9D009FA8A4 /* Quicksand-SemiBold.ttf in Resources */,
 				CE23B22A255D9D4200B952DC /* Assets.xcassets in Resources */,
 				CE6A924C25605B8F009FA8A4 /* Quicksand-Regular.ttf in Resources */,
-				CEB2048E2566CBEC00ACC284 /* Discover.storyboard in Resources */,
+				CE1CE75C25682D0D001DFE14 /* Discover.storyboard in Resources */,
 				CEB2048C2566CBB800ACC284 /* About.storyboard in Resources */,
 				CE23B228255D9D4100B952DC /* Main.storyboard in Resources */,
 				CE6A924925605B8F009FA8A4 /* Quicksand-Light.ttf in Resources */,
+				CE1CE75625682B58001DFE14 /* Localizable.strings in Resources */,
 				CE6A924A25605B8F009FA8A4 /* Quicksand-Bold.ttf in Resources */,
 				CE6A925025605B9D009FA8A4 /* Quicksand-VariableFont_wght.ttf in Resources */,
 				CE6A924B25605B8F009FA8A4 /* Quicksand-Medium.ttf in Resources */,
@@ -353,6 +365,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CE1CE75425682B58001DFE14 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1CE75525682B58001DFE14 /* zh-Hant */,
+				CE1CE75B25682B99001DFE14 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		CE1CE75725682B58001DFE14 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1CE75825682B58001DFE14 /* zh-Hant */,
+				CE1CE75A25682B99001DFE14 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CE1CE75E25682D0D001DFE14 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE1CE75D25682D0D001DFE14 /* Base */,
+				CE1CE76025682D29001DFE14 /* zh-Hant */,
+				CE1CE76225682D29001DFE14 /* de */,
+			);
+			name = Discover.storyboard;
+			sourceTree = "<group>";
+		};
 		CE23B226255D9D4100B952DC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

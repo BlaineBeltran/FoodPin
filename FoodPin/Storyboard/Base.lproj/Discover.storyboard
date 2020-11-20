@@ -6,11 +6,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Quicksand-Light.ttf">
+            <string>Quicksand-Light</string>
+        </array>
         <array key="Quicksand-Medium.ttf">
             <string>Quicksand-Medium</string>
-        </array>
-        <array key="Quicksand-VariableFont_wght.ttf">
-            <string>Quicksand-Light</string>
         </array>
     </customFonts>
     <scenes>
@@ -38,6 +38,11 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="236" id="35t-Xw-daD"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="OF3-X4-ut0">
                                                     <rect key="frame" x="0.0" y="242" width="374" height="50.5"/>

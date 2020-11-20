@@ -11,10 +11,10 @@ import SafariServices
 
 class AboutTableViewController: UITableViewController {
     
-    var sectionTitles = ["Feedback", "Follow Us"]
+    var sectionTitles = [NSLocalizedString("Feedback", comment: "Feedback"), NSLocalizedString("Follow Us", comment: "Follow Us")]
     
     // Store the related data in tuples, we are able to combine multiple vlaues into one value
-    var sectionContent = [[(image: "store", text: "Rate us on the App Store", link: "https://apple.com/ios/app-store/"), (image: "chat", text: "Tell us your feedback", link: "https://blainebeltran.com/index.php/contact/")], [(image: "twitter", text: "Twitter", link: "https://github.com/BlaineBeltran"), (image: "facebook", text: "Facebook", link: "https://github.com/BlaineBeltran"), (image: "instagram", text: "Instagram", link: "https://github.com/BlaineBeltran")]]
+    var sectionContent = [[(image: "store", text: NSLocalizedString("Rate us on the App Store", comment: "Rate us on the App Store") , link: "https://apple.com/ios/app-store/"), (image: "chat", text: NSLocalizedString("Tell us your feedback", comment: "Tell us your feedback"), link: "https://blainebeltran.com/index.php/contact/")], [(image: "twitter", text: NSLocalizedString("Twitter", comment: "Twitter") , link: "https://github.com/BlaineBeltran"), (image: "facebook", text: NSLocalizedString("Facebook", comment: "Facebook"), link: "https://github.com/BlaineBeltran"), (image: "instagram", text: NSLocalizedString("Instagram", comment: "Instagram"), link: "https://github.com/BlaineBeltran")]]
 
     override func viewDidLoad() {
         super.viewDidLoad()

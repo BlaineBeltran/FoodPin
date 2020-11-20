@@ -17,6 +17,7 @@
 		CE24728C25670EB30072A1CF /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24728B25670EB30072A1CF /* WebViewController.swift */; };
 		CE45ED4D2564263D00C4AF8E /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45ED4C2564263D00C4AF8E /* RoundedTextField.swift */; };
 		CE45ED4F2564296900C4AF8E /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE45ED4E2564296900C4AF8E /* NewRestaurantController.swift */; };
+		CE50074525681CA600C37AA9 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50074425681CA600C37AA9 /* DiscoverTableViewCell.swift */; };
 		CE58882B2562CE1B00AA0ABA /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58882A2562CE1B00AA0ABA /* UIColor+Ext.swift */; };
 		CE58882D2562CFE300AA0ABA /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE58882C2562CFE300AA0ABA /* UINavigationController+Ext.swift */; };
 		CE5888302562D48400AA0ABA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE58882F2562D48400AA0ABA /* MapKit.framework */; };
@@ -60,6 +61,13 @@
 		CE24728B25670EB30072A1CF /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		CE45ED4C2564263D00C4AF8E /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		CE45ED4E2564296900C4AF8E /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
+		CE50074425681CA600C37AA9 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
+		CE500746256826E700C37AA9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		CE500747256826E700C37AA9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "FoodPin/Storyboard/zh-Hant.lproj/About.strings"; sourceTree = "<group>"; };
+		CE500748256826E800C37AA9 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CE500749256826F900C37AA9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		CE50074A256826F900C37AA9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = FoodPin/Storyboard/de.lproj/About.strings; sourceTree = "<group>"; };
+		CE50074B256826F900C37AA9 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		CE58882A2562CE1B00AA0ABA /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		CE58882C2562CFE300AA0ABA /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
 		CE58882F2562D48400AA0ABA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -206,6 +214,7 @@
 				CE5888312562D8E500AA0ABA /* RestaurantDetailSeperatorCell.swift */,
 				CE5888332562D9B400AA0ABA /* RestaurantDetailMapCell.swift */,
 				CE45ED4C2564263D00C4AF8E /* RoundedTextField.swift */,
+				CE50074425681CA600C37AA9 /* DiscoverTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +282,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
+				de,
 			);
 			mainGroup = CE23B214255D9D4100B952DC;
 			productRefGroup = CE23B21E255D9D4100B952DC /* Products */;
@@ -316,6 +327,7 @@
 				CEB8C19325657CD800D0D660 /* WalkthroughPageViewController.swift in Sources */,
 				CE875D9D256332F00056A1D6 /* ReviewViewController.swift in Sources */,
 				CEA01FA62561BFC4009C05B8 /* RestaurantDetailTextCell.swift in Sources */,
+				CE50074525681CA600C37AA9 /* DiscoverTableViewCell.swift in Sources */,
 				CE0E017D255DD5F90046F273 /* RestaurantTableViewController.swift in Sources */,
 				CE6A923725604830009FA8A4 /* Restaurant.swift in Sources */,
 				CEF718262567236100C5FD4E /* DiscoverTableViewController.swift in Sources */,
@@ -345,6 +357,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE23B227255D9D4100B952DC /* Base */,
+				CE500746256826E700C37AA9 /* zh-Hant */,
+				CE500749256826F900C37AA9 /* de */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -353,6 +367,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CE23B22C255D9D4200B952DC /* Base */,
+				CE500748256826E800C37AA9 /* zh-Hant */,
+				CE50074B256826F900C37AA9 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -361,6 +377,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CEB2048B2566CBB800ACC284 /* Base */,
+				CE500747256826E700C37AA9 /* zh-Hant */,
+				CE50074A256826F900C37AA9 /* de */,
 			);
 			name = About.storyboard;
 			sourceTree = "<group>";
@@ -372,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -432,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

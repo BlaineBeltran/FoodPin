@@ -11,6 +11,9 @@ import CloudKit
 
 class DiscoverTableViewController: UITableViewController {
     
+    // Cache to save images that were already loaded and provide a key, value pair
+    private var imageCache = NSCache<CKRecord.ID, NSURL>()
+    
     var spinner = UIActivityIndicatorView()
     
     // Hold the fetched ckrecord objects from the cloud
@@ -18,6 +21,12 @@ class DiscoverTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Pull to Refresh Control
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = UIColor.white
+        refreshControl?.tintColor = UIColor.gray
+        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControl.Event.valueChanged)
         
         spinner.style = .large
         spinner.hidesWhenStopped = true
@@ -56,33 +65,79 @@ class DiscoverTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DiscoverCell", for: indexPath) as! DiscoverTableViewCell
         
         // Configure the cell
         let restaurant = restaurants[indexPath.row]
-        cell.textLabel?.text = restaurant.object(forKey: "name") as? String
+        cell.nameLabel.text = restaurant.object(forKey: "name") as? String
+        cell.typeLabel.text = restaurant.object(forKey: "type") as? String
+        cell.phoneLabel.text = restaurant.object(forKey: "phone") as? String
+        cell.locationLabel.text = restaurant.object(forKey: "location") as? String
+        cell.descriptionLabel.text = restaurant.object(forKey: "description") as? String
         
-        if let image = restaurant.object(forKey: "image"), let imageAsset = image as? CKAsset {
-            
-            // We try to load the image and if not, we load an optional without a value
-            if let imageData = try? Data.init(contentsOf: imageAsset.fileURL!) {
-                cell.imageView?.image = UIImage(data: imageData)
+        
+        // Set the default image
+        cell.featuredImageView.image = UIImage(named: "photo")
+        
+        // Check if the image is stored in cache
+        if let imageFileURL = imageCache.object(forKey: restaurant.recordID) {
+            // Fetch image from cache
+            print("Get image from cache")
+            if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
+                cell.featuredImageView.image = UIImage(data: imageData)
             }
+        } else {
+            // Fetch Image from iCloud in background
+            let publicDatabase = CKContainer.default().publicCloudDatabase
+            let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
+            fetchRecordsImageOperation.desiredKeys = ["image"]
+            fetchRecordsImageOperation.queuePriority = .veryHigh
+            
+            fetchRecordsImageOperation.perRecordCompletionBlock = { (record, recordID, error) -> Void in
+                if let error = error {
+                    print("Failed to get restaurant image: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let restaurantRecord = record, let image = restaurantRecord.object(forKey: "image"), let imageAsset = image as? CKAsset {
+                    
+                    if let imageData = try? Data.init(contentsOf: imageAsset.fileURL!) {
+                        
+                        // Replace the placeholder image with the restaurant image
+                        DispatchQueue.main.async {
+                            cell.featuredImageView.image = UIImage(data: imageData)
+                            cell.setNeedsLayout()
+                        }
+                        
+                        // Add the image URL to cache
+                        self.imageCache.setObject(imageAsset.fileURL! as NSURL, forKey: restaurant.recordID)
+                    }
+                }
+            }
+            
+            publicDatabase.add(fetchRecordsImageOperation)
         }
-        
+            
         return cell
+            
     }
+
     
-    func fetchRecordsFromCloud() {
-        // Fetch data using Convenience API
+    @objc func fetchRecordsFromCloud() {
+        // Remove exisiting records before refreshing
+        restaurants.removeAll()
+        tableView.reloadData()
+        
+        // Fetch data using Convenience API and then sort in reverse chronological order
         let cloudContainer = CKContainer.default()
         let publicDatabase = cloudContainer.publicCloudDatabase
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "Restaurant", predicate: predicate)
+        query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
-        // Create the query operation with the query
+        // Create the query operation with the query and get the desired info to display aka the desired keys
         let queryOperation = CKQueryOperation(query: query)
-        queryOperation.desiredKeys = ["name", "image"]
+        queryOperation.desiredKeys = ["name", "type", "phone", "location", "description"]
         queryOperation.queuePriority = .veryHigh
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = { (record) -> Void in
@@ -98,6 +153,13 @@ class DiscoverTableViewController: UITableViewController {
             print("Successfully retrieved the data from iCloud")
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
+                
+                // End refresh when pulled down
+                if let refreshControl = self.refreshControl{
+                    if refreshControl.isRefreshing {
+                        refreshControl.endRefreshing()
+                    }
+                }
                 self.tableView.reloadData()
             }
         }

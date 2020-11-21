@@ -148,7 +148,6 @@
 				CE6A9239256054D0009FA8A4 /* Storyboard */,
 				CE6A923825605494009FA8A4 /* Controller */,
 				CE23B220255D9D4100B952DC /* AppDelegate.swift */,
-				CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */,
 				CE23B222255D9D4100B952DC /* SceneDelegate.swift */,
 				CE23B229255D9D4200B952DC /* Assets.xcassets */,
 				CE23B22E255D9D4200B952DC /* Info.plist */,
@@ -190,6 +189,7 @@
 				CEB2048F2566CE4F00ACC284 /* AboutTableViewController.swift */,
 				CE24728B25670EB30072A1CF /* WebViewController.swift */,
 				CEF718252567236100C5FD4E /* DiscoverTableViewController.swift */,
+				CEA801C2255F40540036687B /* RestaurantDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

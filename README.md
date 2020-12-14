@@ -1,4 +1,4 @@
-# FoodPin
+# Foodie
 ### This app allows you to:
 - Save your favorite restaurants
 - Create a restaurant record and import a photo from photo album

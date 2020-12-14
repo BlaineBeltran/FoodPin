@@ -7,12 +7,14 @@ as the restaurant image
 - Show the location of a restaurant on maps
 - View restaurants shared by your fellow foodies
 
+# Test Link
+https://testflight.apple.com/join/mtdDF50A
+
 # App Preview
 <img align="left" alt="Screen Shot 1" width="256px" src="https://user-images.githubusercontent.com/55524257/99321203-edeadc80-2832-11eb-8c61-64a642702b7a.png" />
 <img align="left" alt="Screen Shot 1" width="256px" src="https://user-images.githubusercontent.com/55524257/99321239-fe02bc00-2832-11eb-9ce9-556e168c3c9a.png" />
 <img align="left" alt="Screen Shot 1" width="256px" src="https://user-images.githubusercontent.com/55524257/99321346-3904ef80-2833-11eb-97a4-35ca7cdca249.png" />
 
-# Test Link
 
 
 
